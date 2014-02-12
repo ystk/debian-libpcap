@@ -1,3 +1,112 @@
+libpcap (1.3.0-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Romain Francoise <rfrancoise@debian.org>  Wed, 13 Jun 2012 23:16:16 +0200
+
+libpcap (1.2.1-3) unstable; urgency=low
+
+  * Use dh-autoreconf.
+  * Add CPPFLAGS to CFLAGS to avoid losing fortify hardening flags
+    (closes: #674493).
+  * Make sure we use LDFLAGS while linking the shared library to avoid
+    losing the relro hardening flag.
+  * Rename linker script to avoid unpatch failure.
+
+ -- Romain Francoise <rfrancoise@debian.org>  Sat, 26 May 2012 15:53:07 +0200
+
+libpcap (1.2.1-2) unstable; urgency=low
+
+  * Cherry-pick commit d55b6f4f1b from upstream to make absence of
+    Netfilter support in the kernel non-fatal (closes: #672337).
+  * debian/control: Set Standards-Version to 3.9.3.
+
+ -- Romain Francoise <rfrancoise@debian.org>  Thu, 10 May 2012 20:37:13 +0200
+
+libpcap (1.2.1-1) unstable; urgency=low
+
+  * New upstream version. API additions: pcap_set_tstamp_type(),
+    pcap_{list,free}_tstamp_types(), pcap_tstamp_type_name_to_val(),
+    pcap_tstamp_type_val_to_{description,name}().
+
+ -- Romain Francoise <rfrancoise@debian.org>  Wed, 04 Jan 2012 20:46:49 +0100
+
+libpcap (1.1.1-10) unstable; urgency=low
+
+  * Cherry-pick commit 93583909e1 from upstream to fix detection of VLAN
+    acceleration support in the configure script (LP: #838952).
+
+ -- Romain Francoise <rfrancoise@debian.org>  Thu, 03 Nov 2011 19:29:58 +0100
+
+libpcap (1.1.1-9) unstable; urgency=low
+
+  * debian/rules: Stop setting CFLAGS; it's no longer useful
+    (closes: #647300).
+  * Override 'package-needs-versioned-debhelper-build-depends'.
+
+ -- Romain Francoise <rfrancoise@debian.org>  Wed, 02 Nov 2011 20:30:02 +0100
+
+libpcap (1.1.1-8) unstable; urgency=low
+
+  * Backport additional changes from upstream to make the fix for
+    CVE-2011-1935 work on kernels without support for PACKET_RESERVE
+    (closes: #625443).
+  * Retroactively mention CVE id in 1.1.1-4 changelog entry.
+
+ -- Romain Francoise <rfrancoise@debian.org>  Sun, 10 Jul 2011 18:47:31 +0200
+
+libpcap (1.1.1-7) unstable; urgency=low
+
+  * Build for multiarch:
+    + Set debhelper compat level to 9, bump build-depends.
+    + Set Multi-Arch: same on libpcap0.8 and add required Pre-Depends.
+    + Adjust install paths.
+  * debian/patches/10_shared_lib.diff: Prevent 'pcap-config --libs' from
+    adding an rpath now that libdir != /usr/lib.
+
+ -- Romain Francoise <rfrancoise@debian.org>  Tue, 28 Jun 2011 20:14:43 +0200
+
+libpcap (1.1.1-6) unstable; urgency=low
+
+  * debian/patches/47_ip6_protochain.patch: New patch; fixes a crash in
+    the BPF interpreter with "ip6 protochain" on 64-bit platforms
+    (closes: #627342).
+  * debian/control: Avoid "we" in long description (closes: #623607).
+  * debian/control: Set Standards-Version to 3.9.2.
+
+ -- Romain Francoise <rfrancoise@debian.org>  Mon, 23 May 2011 19:13:27 +0200
+
+libpcap (1.1.1-5) unstable; urgency=low
+
+  * Fix build issue on kfreebsd which causes FTBFS in applications,
+    introduced in 1.1.1-4. Thanks to Jakub Wilk <jwilk@debian.org> for the
+    patch (closes: #626232).
+
+ -- Romain Francoise <rfrancoise@debian.org>  Tue, 10 May 2011 21:10:53 +0200
+
+libpcap (1.1.1-4) unstable; urgency=low
+
+  [ Romain Francoise ]
+  * Cherry-pick commit 073a8b37f9 from upstream to fix device detection
+    when the bonding module is loaded (closes: #612803).
+  * debian/patches/50_kfreebsd.diff: Enable zerocopy BPF again.
+
+  [ Robert S. Edmonds ]
+  * Backport commit ea9432fabd from upstream to fix corruption of snapshot
+    length on live captures (CVE-2011-1935) (closes: #623868).
+
+ -- Romain Francoise <rfrancoise@debian.org>  Sat, 30 Apr 2011 12:30:27 +0200
+
+libpcap (1.1.1-3) unstable; urgency=low
+
+  * Make the configure script recognize GNU/Hurd; patch from Svante Signell
+    (closes: #612834).
+  * debian/control: Set Standards-Version to 3.9.1.
+  * debian/patches/30_man_fixes.diff: Fix a few typos in man pages
+    detected by lintian.
+
+ -- Romain Francoise <rfrancoise@debian.org>  Sun, 10 Apr 2011 20:39:37 +0200
+
 libpcap (1.1.1-2) unstable; urgency=low
 
   * debian/patches/50_kfreebsd.diff: Fix configure script to properly

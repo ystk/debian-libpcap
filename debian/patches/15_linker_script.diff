@@ -1,23 +1,19 @@
 Use a linker script.
----
- Makefile.in |    2 -
- libpcap.lds |   83 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 2 files changed, 84 insertions(+), 1 deletion(-)
 
 --- a/Makefile.in
 +++ b/Makefile.in
-@@ -67,7 +67,7 @@
+@@ -69,7 +69,7 @@
  
  # Standard CFLAGS
- CFLAGS = $(CCOPT) $(INCLS) $(DEFS)
+ FULL_CFLAGS = $(CCOPT) $(INCLS) $(DEFS) $(CFLAGS) $(CPPFLAGS)
 -CFLAGS_SHARED = -shared -Wl,-soname,$(SOLIBRARY).$(MAJ)
-+CFLAGS_SHARED = -shared -Wl,-soname,$(SOLIBRARY).$(MAJ) -Wl,--version-script=libpcap.lds
++CFLAGS_SHARED = -shared -Wl,-soname,$(SOLIBRARY).$(MAJ) -Wl,--version-script=libpcap-symbols.lds
  
  INSTALL = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
 --- /dev/null
-+++ b/libpcap.lds
-@@ -0,0 +1,83 @@
++++ b/libpcap-symbols.lds
+@@ -0,0 +1,90 @@
 +{
 +  global:
 +    bpf_dump;
@@ -98,6 +94,13 @@ Use a linker script.
 +    pcap_set_rfmon;
 +    pcap_set_snaplen;
 +    pcap_set_timeout;
++    /* introduced in pcap 1.2 */
++    pcap_set_tstamp_type;
++    pcap_list_tstamp_types;
++    pcap_free_tstamp_types;
++    pcap_tstamp_type_name_to_val;
++    pcap_tstamp_type_val_to_name;
++    pcap_tstamp_type_val_to_description;
 +  local:
 +    *;
 +};

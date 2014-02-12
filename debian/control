@@ -2,13 +2,14 @@ Source: libpcap
 Section: devel
 Priority: optional
 Maintainer: Romain Francoise <rfrancoise@debian.org>
-Build-Depends: debhelper (>= 7.0.50~),
+Build-Depends: debhelper (>= 8.1.3),
+               dh-autoreconf,
                flex,
                bison,
                perl,
                autotools-dev,
                linux-libc-dev (>= 2.6.27) [i386]
-Standards-Version: 3.8.4
+Standards-Version: 3.9.3
 Homepage: http://www.tcpdump.org/
 Vcs-Browser: http://git.debian.org/?p=users/rfrancoise/libpcap.git
 Vcs-Git: git://git.debian.org/git/users/rfrancoise/libpcap.git
@@ -34,15 +35,17 @@ Description: development library and header files for libpcap0.8
  .
  Since almost every system vendor provides a different interface for
  packet capture, and since there are several tools that require this
- functionality, we've created this system-independent API to ease in
- porting and to alleviate the need for several system-dependent packet
- capture modules in each application.
+ functionality, the libpcap authors created this system-independent API
+ to ease in porting and to alleviate the need for several
+ system-dependent packet capture modules in each application.
 
 Package: libpcap0.8
 Section: libs
 Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Replaces: libpcap0.8-dev (<< 1.0.0-2)
+Multi-Arch: same
 Description: system interface for user-level packet capture
  libpcap (Packet CAPture) provides a portable framework for low-level
  network monitoring.  Applications include network statistics collection,
@@ -50,9 +53,9 @@ Description: system interface for user-level packet capture
  .
  Since almost every system vendor provides a different interface for
  packet capture, and since there are several tools that require this
- functionality, we've created this system-independent API to ease in
- porting and to alleviate the need for several system-dependent packet
- capture modules in each application.
+ functionality, the libpcap authors created this system-independent API
+ to ease in porting and to alleviate the need for several
+ system-dependent packet capture modules in each application.
 
 Package: libpcap0.8-dbg
 Section: debug

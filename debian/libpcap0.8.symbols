@@ -26,11 +26,12 @@ libpcap.so.0.8 libpcap0.8 #MINVER#
  pcap_dump_open@Base 0.9.8
  pcap_ether_aton@Base 0.9.8
  pcap_ether_hostton@Base 0.9.8
- pcap_free_datalinks@Base 1.0.0
  pcap_file@Base 0.9.8
  pcap_fileno@Base 0.9.8
  pcap_findalldevs@Base 0.9.8
  pcap_fopen_offline@Base 0.9.8
+ pcap_free_datalinks@Base 1.0.0
+ pcap_free_tstamp_types@Base 1.2.1
  pcap_freealldevs@Base 0.9.8
  pcap_freecode@Base 0.9.8
  pcap_get_selectable_fd@Base 0.9.8
@@ -40,6 +41,7 @@ libpcap.so.0.8 libpcap0.8 #MINVER#
  pcap_is_swapped@Base 0.9.8
  pcap_lib_version@Base 0.9.8
  pcap_list_datalinks@Base 0.9.8
+ pcap_list_tstamp_types@Base 1.2.1
  pcap_lookupdev@Base 0.9.8
  pcap_lookupnet@Base 0.9.8
  pcap_loop@Base 0.9.8
@@ -68,6 +70,7 @@ libpcap.so.0.8 libpcap0.8 #MINVER#
  pcap_set_rfmon@Base 1.0.0
  pcap_set_snaplen@Base 1.0.0
  pcap_set_timeout@Base 1.0.0
+ pcap_set_tstamp_type@Base 1.2.1
  pcap_setdirection@Base 0.9.8
  pcap_setfilter@Base 0.9.8
  pcap_setnonblock@Base 0.9.8
@@ -75,4 +78,7 @@ libpcap.so.0.8 libpcap0.8 #MINVER#
  pcap_stats@Base 0.9.8
  pcap_statustostr@Base 1.0.0
  pcap_strerror@Base 0.9.8
+ pcap_tstamp_type_name_to_val@Base 1.2.1
+ pcap_tstamp_type_val_to_description@Base 1.2.1
+ pcap_tstamp_type_val_to_name@Base 1.2.1
  pcap_version@Base 0.9.8
