@@ -30,11 +30,13 @@ libpcap.so.0.8 libpcap0.8 #MINVER#
  pcap_fileno@Base 0.9.8
  pcap_findalldevs@Base 0.9.8
  pcap_fopen_offline@Base 0.9.8
+ pcap_fopen_offline_with_tstamp_precision@Base 1.5.1
  pcap_free_datalinks@Base 1.0.0
  pcap_free_tstamp_types@Base 1.2.1
  pcap_freealldevs@Base 0.9.8
  pcap_freecode@Base 0.9.8
  pcap_get_selectable_fd@Base 0.9.8
+ pcap_get_tstamp_precision@Base 1.5.1
  pcap_geterr@Base 0.9.8
  pcap_getnonblock@Base 0.9.8
  pcap_inject@Base 0.9.8
@@ -60,16 +62,20 @@ libpcap.so.0.8 libpcap0.8 #MINVER#
  pcap_next_ex@Base 0.9.8
  pcap_offline_filter@Base 1.0.0
  pcap_open_dead@Base 0.9.8
+ pcap_open_dead_with_tstamp_precision@Base 1.5.1
  pcap_open_live@Base 0.9.8
  pcap_open_offline@Base 0.9.8
+ pcap_open_offline_with_tstamp_precision@Base 1.5.1
  pcap_perror@Base 0.9.8
  pcap_sendpacket@Base 0.9.8
  pcap_set_buffer_size@Base 1.0.0
  pcap_set_datalink@Base 0.9.8
+ pcap_set_immediate_mode@Base 1.5.1
  pcap_set_promisc@Base 1.0.0
  pcap_set_rfmon@Base 1.0.0
  pcap_set_snaplen@Base 1.0.0
  pcap_set_timeout@Base 1.0.0
+ pcap_set_tstamp_precision@Base 1.5.1
  pcap_set_tstamp_type@Base 1.2.1
  pcap_setdirection@Base 0.9.8
  pcap_setfilter@Base 0.9.8

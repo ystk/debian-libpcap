@@ -1,0 +1,13 @@
+Include bluetooth/mgmt.h in bt-monitor compile test to make it fail
+with BlueZ 5.x.
+
+--- a/configure.in
++++ b/configure.in
+@@ -1489,6 +1489,7 @@
+ [
+ #include <bluetooth/bluetooth.h>
+ #include <bluetooth/hci.h>
++#include <bluetooth/mgmt.h>
+ ],
+ 			[u_int i = HCI_CHANNEL_MONITOR],
+ 			ac_cv_lbl_hci_channel_monitor_is_defined=yes,

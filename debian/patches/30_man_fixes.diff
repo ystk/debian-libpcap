@@ -2,7 +2,7 @@ Misc. fixes to the upstream man page.
 
 --- a/pcap.3pcap.in
 +++ b/pcap.3pcap.in
-@@ -860,7 +860,7 @@
+@@ -882,7 +882,7 @@
  script or some other configuration script to check whether the libpcap
  1.0 APIs are available and use them only if they are.
  .SH SEE ALSO

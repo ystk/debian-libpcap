@@ -2,7 +2,7 @@ Use a linker script.
 
 --- a/Makefile.in
 +++ b/Makefile.in
-@@ -69,7 +69,7 @@
+@@ -70,7 +70,7 @@
  
  # Standard CFLAGS
  FULL_CFLAGS = $(CCOPT) $(INCLS) $(DEFS) $(CFLAGS) $(CPPFLAGS)
@@ -13,7 +13,7 @@ Use a linker script.
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
 --- /dev/null
 +++ b/libpcap-symbols.lds
-@@ -0,0 +1,90 @@
+@@ -0,0 +1,97 @@
 +{
 +  global:
 +    bpf_dump;
@@ -101,6 +101,13 @@ Use a linker script.
 +    pcap_tstamp_type_name_to_val;
 +    pcap_tstamp_type_val_to_name;
 +    pcap_tstamp_type_val_to_description;
++    /* introduced in pcap 1.5 */
++    pcap_set_immediate_mode;
++    pcap_set_tstamp_precision;
++    pcap_get_tstamp_precision;
++    pcap_open_dead_with_tstamp_precision;
++    pcap_open_offline_with_tstamp_precision;
++    pcap_fopen_offline_with_tstamp_precision;
 +  local:
 +    *;
 +};

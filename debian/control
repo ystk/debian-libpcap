@@ -8,11 +8,12 @@ Build-Depends: debhelper (>= 8.1.3),
                bison,
                perl,
                autotools-dev,
-               linux-libc-dev (>= 2.6.27) [i386]
-Standards-Version: 3.9.3
+               linux-libc-dev (>= 2.6.27) [i386],
+               libbluetooth-dev [linux-any]
+Standards-Version: 3.9.5
 Homepage: http://www.tcpdump.org/
-Vcs-Browser: http://git.debian.org/?p=users/rfrancoise/libpcap.git
-Vcs-Git: git://git.debian.org/git/users/rfrancoise/libpcap.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=users/rfrancoise/libpcap.git
+Vcs-Git: git://anonscm.debian.org/users/rfrancoise/libpcap.git
 
 Package: libpcap-dev
 Section: libdevel
@@ -62,6 +63,7 @@ Section: debug
 Priority: extra
 Architecture: any
 Depends: libpcap0.8 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Multi-Arch: same
 Description: debugging symbols for libpcap0.8
  libpcap (Packet CAPture) provides a portable framework for low-level
  network monitoring.  Applications include network statistics collection,

@@ -15,7 +15,7 @@ Use canonical versions of config.{guess,sub} instead of upstream's.
 +
  # Attempt to guess a canonical system name.
  #   Copyright (C) 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999,
- #   2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010
+ #   2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010,
 --- a/config.sub
 +++ b/config.sub
 @@ -1,4 +1,9 @@
@@ -27,4 +27,4 @@ Use canonical versions of config.{guess,sub} instead of upstream's.
 +
  # Configuration validation subroutine script.
  #   Copyright (C) 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999,
- #   2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010
+ #   2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010,

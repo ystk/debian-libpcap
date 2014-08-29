@@ -1,3 +1,70 @@
+libpcap (1.6.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Amend configure test for new bt-monitor interface to make it fail properly
+    when built with BlueZ 5.x, as it's apparently not compatible yet.
+
+ -- Romain Francoise <rfrancoise@debian.org>  Wed, 30 Jul 2014 21:05:16 +0200
+
+libpcap (1.5.3-4) unstable; urgency=high
+
+  * Disable zerocopy BPF on kFreeBSD to work around broken atomic support,
+    see #750836 (closes: #750805).
+
+ -- Romain Francoise <rfrancoise@debian.org>  Sat, 14 Jun 2014 13:08:16 +0200
+
+libpcap (1.5.3-3) unstable; urgency=medium
+
+  * Add support for packet capture on GNU/Hurd (w/ netdde drivers), patch by
+    Richard Braun <rbraun@sceen.net> (closes: #744198).
+
+ -- Romain Francoise <rfrancoise@debian.org>  Sun, 01 Jun 2014 20:07:04 +0200
+
+libpcap (1.5.3-2) unstable; urgency=low
+
+  * Enable Bluetooth capture on Linux (closes: #737357).
+
+ -- Romain Francoise <rfrancoise@debian.org>  Mon, 03 Feb 2014 22:03:51 +0100
+
+libpcap (1.5.3-1) unstable; urgency=low
+
+  * New upstream bugfix release, fixes more TPACKET_V3 issues
+    (closes: #734455, #733747).
+
+ -- Romain Francoise <rfrancoise@debian.org>  Thu, 16 Jan 2014 18:54:20 +0100
+
+libpcap (1.5.2-1) unstable; urgency=low
+
+  * New upstream bugfix release, fixes initialization on kernels without
+    TPACKET_V3.
+
+ -- Romain Francoise <rfrancoise@debian.org>  Wed, 04 Dec 2013 13:56:39 +0100
+
+libpcap (1.5.1-1) unstable; urgency=low
+
+  * New upstream version, API additions: pcap_set_immediate_mode(),
+    pcap_{get,set}_tstamp_precision(), pcap_open_dead_with_tstamp_precision(),
+    pcap_{,f}open_offline_with_tstamp_precision().
+  * debian/patches/50_hurd.diff: Dropped, merged upstream.
+  * Set Standards-Version to 3.9.5.
+
+ -- Romain Francoise <rfrancoise@debian.org>  Sun, 01 Dec 2013 18:28:34 +0100
+
+libpcap (1.4.0-2) unstable; urgency=low
+
+  * Fix FTBFS on hurd-i386 due to pcap_findalldevs() refactoring.
+
+ -- Romain Francoise <rfrancoise@debian.org>  Sat, 15 Jun 2013 12:32:23 +0200
+
+libpcap (1.4.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Make debug package Multi-Arch: same.
+  * Use canonical locations in Vcs-* fields.
+  * Set Standards-Version to 3.9.4.
+
+ -- Romain Francoise <rfrancoise@debian.org>  Sun, 26 May 2013 18:21:24 +0200
+
 libpcap (1.3.0-1) unstable; urgency=low
 
   * New upstream release.
