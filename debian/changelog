@@ -1,3 +1,16 @@
+libpcap (1.6.2-2) unstable; urgency=medium
+
+  * Re-enable zerocopy BPF on kFreeBSD (closes: #764228).
+  * Set Standards-Version to 3.9.6.
+
+ -- Romain Francoise <rfrancoise@debian.org>  Sat, 11 Oct 2014 19:28:05 +0200
+
+libpcap (1.6.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Romain Francoise <rfrancoise@debian.org>  Thu, 04 Sep 2014 19:06:26 +0200
+
 libpcap (1.6.1-1) unstable; urgency=medium
 
   * New upstream release.

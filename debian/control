@@ -10,7 +10,7 @@ Build-Depends: debhelper (>= 8.1.3),
                autotools-dev,
                linux-libc-dev (>= 2.6.27) [i386],
                libbluetooth-dev [linux-any]
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Homepage: http://www.tcpdump.org/
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=users/rfrancoise/libpcap.git
 Vcs-Git: git://anonscm.debian.org/users/rfrancoise/libpcap.git

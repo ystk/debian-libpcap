@@ -19,28 +19,7 @@ Support for GNU/kFreeBSD, by Aurelien Jarno and others.
  	V_PCAP=bpf
  elif test -r /usr/include/net/pfilt.h ; then
  	V_PCAP=pf
-@@ -523,20 +524,6 @@
- 	#
- 	AC_CHECK_HEADERS(net/if_media.h)
- 
--	AC_MSG_CHECKING(whether the system supports zerocopy BPF)
--	AC_TRY_COMPILE(
--	    [#include <sys/socket.h>
--	    #include <sys/ioctl.h>
--	    #include <net/if.h>
--	    #include <net/bpf.h>],
--	    [return (BIOCROTZBUF + BPF_BUFMODE_ZBUF);],
--	    [  
--		AC_MSG_RESULT(yes)
--		AC_DEFINE(HAVE_ZEROCOPY_BPF, 1,
--		[define if the system supports zerocopy BPF])
--	    ],
--	    AC_MSG_RESULT(no))
--
- 	    #
- 	    # Check whether we have struct BPF_TIMEVAL.
- 	    #
-@@ -549,6 +536,7 @@
+@@ -549,6 +550,7 @@
  #endif
  #include <net/bpf.h>
  		    ])
