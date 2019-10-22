@@ -6,3 +6,4 @@
 50_hurd.diff
 50_kfreebsd.diff
 50_autotools-dev.diff
+CVE-2019-15165.patch
